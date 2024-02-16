@@ -127,3 +127,59 @@ const user = {
     fn: test
 }
 setTimeout(user.fn, 1000)//undefintd? */
+
+/* var i = 1
+var b = {};
+
+(function(){
+  i++;
+  b.j=1;
+})();
+console.log(i,b);//2,{j: 1}
+
+(function(i,b){
+  i++;
+  b.k=1;
+})(i,b);
+console.log(i,b)//2,{j: 1, k: 1} */
+
+/* function createIncrement(incBy){
+  let value = 0
+  function increment(){
+    value+=incBy
+    console.log(value)
+  }
+  const message = `current value is ${value}`
+  function log(){
+    console.log(message)
+  }
+  return [increment,log]
+}
+const [increment,log]= createIncrement(1)
+increment()//1
+increment()//2
+increment()//3
+log()//current value is 0 */
+
+
+/* /* function foo(){
+  const x = 10;
+  return {
+    x:20,
+    bar:()=>{
+      console.log(this.x)
+    },
+    baz:function(){
+      console.log(this.x)
+    }
+  }
+}
+const obj1=foo()
+obj1.bar()//undefined
+obj1.baz()//20 */
+
+/* const obj2=foo.call({x:30})
+let y = obj2.bar
+let z = obj2.baz
+y()//20
+z() *///undefined */
