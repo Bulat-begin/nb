@@ -128,6 +128,10 @@ const user = {
 }
 setTimeout(user.fn, 1000)//undefintd? */
 
+
+
+собес:
+
 /* var i = 1
 var b = {};
 
