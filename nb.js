@@ -187,3 +187,58 @@ let y = obj2.bar
 let z = obj2.baz
 y()//20
 z() *///undefined */
+
+
+
+2 срез
+
+console.log(0??'')//0
+console.log(false??0)//false
+console.log(undefined??false)//false
+
+
+
+
+/* let a=10
+function func(){console.log(a)}
+
+const wrap = ()=>{
+  let a = 30
+  func()
+}
+a = 20
+wrap() */ //20
+
+
+
+/* let a=10
+function func(){console.log(a)}
+
+const wrap = ()=>{
+  a = 30
+  func()
+}
+a = 20
+wrap() */ //30
+
+
+
+проваливание в промисах
+/* Promise.resolve(1)
+.then(()=>console.log(2))//вторым
+.then(console.log(3))//первым
+.then(()=>console.log(4))//третьим */
+
+
+
+
+/* console.log('start')
+
+async function fun(){
+  console.log('1')
+  await console.log('2')
+  console.log('3')
+}
+fun()
+console.log('end') */
+//start,1,2,end,3
